@@ -62,14 +62,14 @@ public class Drivetrain extends Subsystem {
   private static final double kMetersPerRev = (2.0 * Math.PI * kWheelRadius) / kGearRatio;
 
   private final SimulatableCANSparkMax mLeftLeader = new SimulatableCANSparkMax(Constants.Drive.kFLMotorId,
-      MotorType.kBrushed);
+      MotorType.kBrushless);
       
   private final SimulatableCANSparkMax mLeftFollower = new SimulatableCANSparkMax(Constants.Drive.kBLMotorId,
-      MotorType.kBrushed);
+      MotorType.kBrushless);
   private final SimulatableCANSparkMax mRightLeader = new SimulatableCANSparkMax(Constants.Drive.kFRMotorId,
-      MotorType.kBrushed);
+      MotorType.kBrushless);
   private final SimulatableCANSparkMax mRightFollower = new SimulatableCANSparkMax(Constants.Drive.kBRMotorId,
-      MotorType.kBrushed);
+      MotorType.kBrushless);
       
 
       
