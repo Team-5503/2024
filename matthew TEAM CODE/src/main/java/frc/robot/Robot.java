@@ -134,6 +134,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopInit() {
+    m_shooter.setNone();
   }
     
   
@@ -142,7 +143,7 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     // Get the x speed. We are inverting this because Xbox controllers return
     // negative values when we push forward.
-    double maxSpeed = .825;
+    double maxSpeed = .2;
     double xSpeed = -m_driverController.getForwardAxis() * maxSpeed;
 
     // Get the rate of angular rotation. We are inverting this because we want a
@@ -166,11 +167,12 @@ public class Robot extends TimedRobot {
     
 
     // Intake
-
+    //commented out for drive only 9/10
+    /* 
     if (m_driverController.getWantsIntake()) {
       if (m_arm.getTarget() == PivotTarget.GROUND){
         m_intake.stopIntake();
-        m_shooter.setSpeaker();
+        m_shooter.setNone();
         m_arm.setStow();
       }
       else if (m_arm.getTarget() == PivotTarget.STOW){
@@ -184,7 +186,7 @@ public class Robot extends TimedRobot {
       if (m_arm.getTarget() == PivotTarget.GROUND){
         m_intake.stopIntake(); 
         m_arm.setStow();
-        m_shooter.setSpeaker();
+        m_shooter.setNone();
        
       }
     
@@ -240,6 +242,7 @@ public class Robot extends TimedRobot {
     if (m_driverController.getWantsAim()){
       m_shooter.setAim();
     }
+    */
   }
 
   @Override

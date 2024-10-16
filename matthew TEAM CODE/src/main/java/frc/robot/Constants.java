@@ -15,7 +15,7 @@ public class Constants {
 
     // DIO
     public static final int k_pivotEncoderId = 0;
-    public static final int k_intakeLimitSwitchId = 4;
+    public static final int k_intakeLimitSwitchId = 0;
 
     // Absolute encoder offset
     public static final double k_pivotEncoderOffset = 0.166842; // Straight up, sketchy to reset to "up"

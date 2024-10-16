@@ -54,7 +54,7 @@ public class Drivetrain extends Subsystem {
   public static final double kMaxAcceleration = 8.0;
 
   // 0.7 rotations per second.
-  public static final double kMaxAngularSpeed = .5;
+  public static final double kMaxAngularSpeed = .3;
 
   private static final double kTrackWidth = Units.inchesToMeters(22.0);
   private static final double kWheelRadius = Units.inchesToMeters(3.0);
